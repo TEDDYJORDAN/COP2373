@@ -1,0 +1,30 @@
+1. Your name and date created.
+Tedros Jordan   5/19/2024
+
+2. A brief description of the program.
+a program that sells 20 tickets allowing the buyers to buy 1-4 tickets each and then displays the number of total
+buyers at the end
+
+3. Any variables you are creating.
+total_tickets
+max_tickets
+total_tickets_sold
+total_buyers
+num_tickets
+remaining_tickets
+
+4. Any functions you are creating.
+def sell_tickets
+
+5. The logical steps to your program. Numbers your steps or write as pseudocode so it's easy for me to follow.
+Define a function sell_tickets().
+start the first value in the input set to total_tickets_sold and total_buyers.
+Use a while loop to sell tickets until the total is 20
+in the loop prompt the user to enter the number of tickets they want to buy.
+Use an if statement to check if the number is between 1-4 and if enough are available.
+If valid, update and display the remaining tickets. if not display again.
+after all tickets are sold, display the total number of buyers.
+
+6. Link to your COP2373 repository.
+https://github.com/TEDDYJORDAN/COP2373
+
