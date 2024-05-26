@@ -1,0 +1,39 @@
+1. Your name and date created.
+Tedros Jordan 5/26/2024
+
+2. A brief description of the program.
+a spam detector for email messages
+
+3. Any variables you are creating.
+spam_keywords
+email_message
+likelihood
+detected_keywords
+spam_score
+
+4. Any functions you are creating.
+scan_email_for_spam(email_message)
+eval_spam_score(spam_score)
+main
+
+5. The logical steps to your program. Numbers your steps or write as pseudocode so it's easy for me to follow.
+Define a list of 30 spam keywords
+Function to scan the email message for spam keywords
+Loop through each keyword in the list of spam keywords
+Check if the keyword is found in the email context
+Count the occurrences of the keyword in the email message
+Increment the spam score by the number of keywords
+Add the detected keyword and its count to the list
+Return the calculated spam score and the list of detected keywords
+Function to evaluate the spam score and determine likelihood
+Return the likelihood assessment
+Main function to handle user interaction and display results
+Print a message asking the user to enter an email message
+Read the email message input from the user
+Call the scan_email_for_spam function to scan the email message for spam keywords
+Call the evaluate_spam_score function to evaluate the spam score and determine likelihood
+Print the spam analysis results
+Call the main function to start the application
+
+6. Link to your COP2373 repository.
+https://github.com/TEDDYJORDAN/COP2373
