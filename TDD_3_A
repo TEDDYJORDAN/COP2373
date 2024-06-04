@@ -1,0 +1,26 @@
+1. Your name and date created.
+Tedros Jordan 6/3/2024
+
+2. A brief description of the program.
+program that asks the user to input expenses and the amount of them, then when you input "done" it totals the total,
+highest and lowest expense
+
+3. Any variables you are creating.
+expenses, expense_type, amount, total_expense, highest expense, lowest_expense
+
+4. Any functions you are creating.
+get_expenses(), analyze_expenses(expenses), main()
+
+5. The logical steps to your program. Numbers your steps or write as pseudocode so it's easy for me to follow.
+1. program starts by calling the get_expenses() function. It uses a while loop to repeatedly prompt the user for the
+expenses until the user enters "done" to indicate that they have finished entering all expenses.
+The data is stored in a list of tuples containing the type and amount.
+2. The analyze_expenses(expenses) function
+takes the list and analyzes it to calculate the total expense, highest expense, and lowest expense.
+It uses the reduce() function from the functools to perform the calculations.
+If the list of expenses is empty, it returns None.
+3. The main() function calls the get_expenses() function to collect
+expenses from the user and then calls the analyze_expenses() function to analyze these expenses then print it.
+
+6. Link to your COP2373 repository.
+https://github.com/TEDDYJORDAN/COP2373
