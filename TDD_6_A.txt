@@ -1,0 +1,57 @@
+1. Your name and date created.
+Tedros Jordan 6/21/2024
+
+2. A brief description of the program.
+program that prompts the user to enter their information, then validates it
+
+3. Any variables you are creating.
+pattern
+phone_number
+ssn
+zip_code
+
+4. Any functions you are creating.
+validate_phone_number(phone_number)
+validate_ssn(ssn)
+validate_zip_code(zip_code)
+main()
+
+5. The logical steps to your program. Numbers your steps or write as pseudocode so it's easy for me to follow.
+function validate_phone_number(phone_number):
+    pattern = compile_regex_pattern(r'^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$')
+    return match_pattern(pattern, phone_number)
+
+function validate_ssn(ssn):
+    pattern = compile_regex_pattern(r'^\d{3}-\d{2}-\d{4}$')
+    return match_pattern(pattern, ssn)
+
+function validate_zip_code(zip_code):
+    pattern = compile_regex_pattern(r'^\d{5}(-\d{4})?$')
+    return match_pattern(pattern, zip_code)
+
+function main():
+    phone_number = get input("Enter a phone number (in the format XXX-XXX-XXXX or (XXX) XXX-XXXX): ")
+    ssn = get input("Enter a social security number (in the format XXX-XX-XXXX): ")
+    zip_code = get input("Enter a zip code (in the format XXXXX or XXXXX-XXXX): ")
+
+    phone_valid = validate_phone_number(phone_number)
+    ssn_valid = validate_ssn(ssn)
+    zip_valid = validate_zip_code(zip_code)
+
+    print("Validation Results:")
+    print result ("Phone Number", phone_number, phone_valid)
+    print result ("Social Security Number", ssn, ssn_valid)
+    print result ("Zip Code", zip_code, zip_valid)
+
+function get_input(prompt):
+    return input(prompt)
+function print result (label, input_value, is_valid):
+    if is_valid:
+        print(label + " (" + input_value + "): Valid")
+    else:
+        print(label + " (" + input_value + "): Invalid")
+
+call main()
+
+6. Link to your COP2373 repository.
+https://github.com/TEDDYJORDAN/COP2373
