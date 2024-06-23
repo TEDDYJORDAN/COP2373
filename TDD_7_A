@@ -1,0 +1,36 @@
+1. Your name and date created.
+Tedros Jordan 6/22/2024
+
+2. A brief description of the program.
+utilizes a regular expression pattern to extract any number of sentences, count the number, and display the sentences
+
+3. Any variables you are creating.
+pattern
+sentences
+text
+sentence
+
+4. Any functions you are creating.
+extract_sentences(text)
+main()
+
+5. The logical steps to your program. Numbers your steps or write as pseudocode so it's easy for me to follow.
+function extract_sentences(text)
+    define pattern as regular expression '[^.!?]*[0-9]*[^.!?]*[.!?]'
+    sentences = find all matches of pattern in text using regular expression
+    For each sentence in sentences
+        If sentence is not empty after stripping whitespace
+            Add stripped sentence to sentences
+    Return sentences
+function main()
+    define sample text = "1. This is a test sentence. 2. 4 test, sentence! does it work? normal sentence."
+    Call extract_sentences(text) and store the result in sentences
+    Print "Extracted Sentences:"
+    for each sentence in sentences
+        Print sentence
+    Print "Total number of sentences: "
+if this script is run as the main program
+    call main()
+
+6. Link to your COP2373 repository.
+https://github.com/TEDDYJORDAN/COP2373
