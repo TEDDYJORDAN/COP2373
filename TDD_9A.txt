@@ -1,0 +1,85 @@
+1. Your name and date created.
+Tedros Jordan
+7/5/2024
+2. A brief description of the program.
+A program that models a bank account and keeps track of your account number, balance, interest rates, withdraws and
+deposits
+
+3. Any variables you are creating.
+name
+account_number
+amount
+interest_rate
+new_rate
+amount
+days
+acct
+interest
+balance
+
+4. Any functions you are creating.
+adjust_interest_rate
+withdraw
+deposit
+get_balance
+__init__
+calculate_interest
+__str__
+test_bank_acct
+
+5. The logical steps to your program. Numbers your steps or write as pseudocode so it's easy for me to follow.
+class BankAcct
+    method __init__(self, name, account_number, amount, interest_rate):
+        self.name to name
+        self.account_number to account_number
+        self.amount to amount
+        self.interest_rate to interest_rate
+
+    adjust_interest_rate(self, new_rate):
+        self.interest_rate to new_rate
+
+    withdraw(self, amount):
+        If amount > self.amount:
+            Print "Insufficient funds"
+        Else:
+            Subtract amount from self.amount
+
+    deposit(self, amount):
+        Add amount to self.amount
+
+    get_balance(self):
+        Return self.amount
+
+    calculate_interest(self, days):
+        Return self.amount * (self.interest_rate / 100) * (days / 365)
+
+    __str__(self):
+        Return formatted string with account details
+
+function test_bank_acct():
+    create instance acct of BankAcct with "Teddy Jordan", "987654321", 10000.00, 4.0
+
+    print acct
+
+    call acct.deposit(500.00)
+    print "\nAfter depositing $500.00:"
+    print acct
+
+    call acct.withdraw(200.00)
+    print "\nAfter withdrawing $200.00:"
+    print acct
+
+    set interest to acct.calculate_interest(30)
+    print "\nInterest for 30 days: $" and interest
+
+    call acct.adjust_interest_rate(4.0)
+    print "\nAfter adjusting interest rate to 4.0%:"
+    print acct
+
+    set balance to acct.get_balance()
+    print "\nCurrent balance: $" and balance
+
+if __name__ == "__main__":
+    Call test_bank_acct()
+
+6. Link to your COP2373 repository.
