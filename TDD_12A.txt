@@ -1,0 +1,105 @@
+1. Your name and date created.
+Teddy Jordan
+7/25/2024
+
+2. A brief description of the program.
+Program that reads the grades.csv file and calculates the mean, medium, standard deviation, maximum, minimum, overall
+statistics and overall passing grades
+
+3. Any variables you are creating.
+data
+means
+medians
+std_devs
+mins
+maxs
+num_exams
+i
+all_grades
+overall_mean
+overall_median
+overall_std_dev
+overall_min
+overall_max
+passing_grade
+num_passed
+num_failed
+num_passed_overall
+num_total_grades
+pass_percentage
+
+4. Any functions you are creating.
+numpy.genfromtxt
+numpy.mean
+numpy.median
+numpy.std
+numpy.min
+numpy.max
+numpy.sum
+numpy.flatten
+
+5. The logical steps to your program. Numbers your steps or write as pseudocode so it's easy for me to follow.
+Import Numpy
+
+Load data from 'grades.csv', with delimiter and skip_header
+    Print Dataset
+    Print 10 rows of data
+    Print blank line
+
+Print "Statistics for each exam"
+means = compute mean of each column in data
+medians = compute median of each column in data
+std_devs = compute standard deviation of each column in data
+mins = compute minimum of each column in data
+maxs = compute maximum of each column in data
+
+num_exams = number of columns in data
+
+    For each exam index i from 0 to num_exams - 1 do
+        Print "Exam i+1:"
+        print mean[i]
+        print median[i]
+        print standard deviation[i]
+        Print minimum[i]
+        print maximum[i]
+        Print blank line
+
+
+   # Calculate and print statistics for all exams
+    Print "Overall statistics for all exams:"
+    all_grades = Flatten data into a single array
+
+    overall_mean = compute mean of all_grades
+    overall_median = compute median of all_grades
+    overall_std_dev = compute standard deviation of all_grades
+    overall_min = compute minimum of all_grades
+    overall_max = compute maximum of all_grades
+
+    Print overall_mean
+    Print overall_median
+    Print overall_std_dev
+    Print overall_min
+    Print overall_max
+    Print blank line
+
+    # Print the number of students who passed and failed each exam
+    passing_grade = 60
+    Print "Pass/fail counts for each exam:"
+    For each exam index i from 0 to num_exams - 1 do
+        num_passed = count number of grades in data[:, i] >= passing_grade
+        num_failed = total number of students - num_passed
+        Print "Exam i+1:"
+        Print num_passed
+        Print num_failed
+        Print blank line
+
+
+    # Print the overall pass percentage across all exams
+    num_passed_overall = count number of grades in all_grades >= passing_grade
+    num_total_grades = size of all_grades
+
+    pass_percentage = (num_passed_overall / num_total_grades) * 100
+
+    Print pass_percentage
+
+6. Link to your COP2373 repository.
