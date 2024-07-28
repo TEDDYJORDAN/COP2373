@@ -1,0 +1,87 @@
+1. Your name and date created.
+Teddy Jordan
+7/26/2024
+
+2. A brief description of the program.
+Program that shows 10 available cities, tells user to input a city via their number, and displays a table showing its
+population and hypothetical 2% growth rate for 20 years
+
+3. Any variables you are creating.
+conn
+c
+cities
+city
+population
+year
+growth_rate
+initial_population
+years
+populations
+data
+selected_city
+choice
+
+4. Any functions you are creating.
+create_database()
+insert_initial_data()
+simulate_population_growth()
+visualize_population_growth(city)
+main()
+
+5. The logical steps to your program. Numbers your steps or write as pseudocode so it's easy for me to follow.
+Import sqlite3
+Import matplotlib.pyplot
+
+connect to 'population_TJ.db'
+create a cursor
+run SQL to create table 'population' if not exists
+commit
+close the connection
+
+cities = list of cities with populations
+connect to 'population_TJ.db'
+create a cursor
+for each city and population in cities do
+    insert city, year 2023, and population into 'population' table
+commit
+close the connection
+
+connect to 'population_TJ.db'
+create a cursor
+growth_rate = 0.02
+run SQL to get distinct cities
+for each city do
+    get population for city in year 2023
+    set initial_population
+    set population to initial_population
+    for years from 2024 to 2043 do
+        calculate new population with growth_rate
+        insert city, year, and population into 'population' table
+commit
+close the connection
+
+define city
+connect to 'population_TJ.db'
+create a cursor
+run SQL to get year and population for city
+get all data
+extract years and populations
+create a plot with years on x-axis, populations on y-axis
+set plot title to 'Population Growth for city'
+show the plot
+
+call create_database
+call insert_initial_data
+call simulate_population_growth
+
+cities = list of available cities
+print list of cities and numbers
+read user input for city choice
+if choice is valid do
+    set selected_city to the city from user choice
+    call visualize_population_growth with selected_city
+else
+    print 'Invalid choice. Run the program again.'
+
+if script is run directly
+    call main
